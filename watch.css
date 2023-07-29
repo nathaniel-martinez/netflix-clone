@@ -1,0 +1,176 @@
+#parent {
+    background-color: #141414;
+}
+/*make the netflix logo in both navbars smaller*/
+.netflik-logo {
+    height: 50px;
+    width: 100px;
+    margin: 9px 0px 9px 0px;
+}
+
+/*styling expanded-navbar*/
+.left-space {
+    width: 10px;
+    flex: 1 0 auto;
+}
+
+
+#expanded-navbar > .table-wrap {
+    width: 540px;
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+
+#expanded-navbar table {
+    width: 100%;
+    height: 100%;
+}
+
+#expanded-navbar td {
+    width: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 19px;
+    color: rgba(229, 229, 229, 0.8);
+}
+
+/*Edit which of the td tags in the html have the selected class using javascript*/
+#expanded-navbar .selected {
+    color: white;
+}
+
+#expanded-navbar td:hover {
+    color: #838181;
+}
+
+.right-space {
+    width: 0px;
+    flex: 12 0 auto;
+}
+
+/*We shift between a shrunken and unshrunken navbar depending of the screen width*/
+@media screen and (min-width:885px){
+    #expanded-navbar {
+        display: flex;
+        height: 68px;
+    }
+
+    #shrunk-navbar {
+        display: none;
+    }
+   
+}
+
+/*Styling shurnk-navbar*/
+#shrunk-navbar .table-wrap {
+    width: 100px;
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+
+#shrunk-navbar table {
+    width: 100%;
+    height: 100%;
+}
+
+#shrunk-navbar td {
+    width: 10px;
+    max-height: 68px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(229, 229, 229, 0.8);
+}
+
+#shrunk-navbar .selected {
+    color: white;
+}
+
+#shrunk-navbar td > div {
+    max-height: 68px;
+}
+
+#shrunk-navbar .drop-down {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100px;
+    max-width: 100px;
+}
+
+#shrunk-navbar .drop-down-start {
+    color: white;
+}
+
+#shrunk-navbar .content-wrap{
+    display: none;
+    flex: 0 0 auto;
+    height: 40px;
+    position: relative;
+}
+
+#shrunk-navbar .drop-down-content {
+    box-sizing: border-box;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 40px;
+    width: 200px;
+    left: -50px;
+}
+
+#shrunk-navbar .link {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#shrunk-navbar .link:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#shrunk-navbar .drop-down:hover {
+    margin-top: 22px;
+}
+
+#shrunk-navbar .top-space {
+    height: 55px;
+    position: relative;
+    bottom: 15px;
+    border-bottom: 3px solid white;
+}
+
+#shrunk-navbar .top-space > i {
+    display: block;
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    left: 48%;
+}
+
+#shrunk-navbar .drop-down:hover > .content-wrap{
+    display: block;
+}
+
+#shrunk-navbar i {
+    font-size: 16px;
+}
+
+@media screen and (max-width:884px){
+    #shrunk-navbar {
+        display: flex;
+        height: 68px;
+    }
+    
+    #expanded-navbar {
+        display: none;
+    }
+}
+
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#parent {
+    height: 30rem;
+}

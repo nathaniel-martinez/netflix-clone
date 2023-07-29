@@ -1,0 +1,142 @@
+#netflik-logo {
+    height: 2rem;
+    width: 13rem;
+}
+
+/*Arrange the header of main page*/
+#header {
+    display: flex;
+    height: 36.18px;
+    margin-top: 36px;
+}
+
+#header-space1 {
+    flex: 1 1 45px;
+}
+
+#header-logo {
+    flex: 1 0 content;
+}
+
+    #netflik-logo {
+        position: relative;
+        top: 5px;
+    }
+
+#header-space2 {
+    flex: 1 1 737.812px;
+}
+
+    /*Designing the lang selector*/
+    #header-lang {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 96px;
+    }
+
+    #lang-sel {
+        position: relative;
+        height: 200px;
+        top: 0px;
+    }
+        /*positioining magic*/
+        #lang-icon-wrap {
+            display: inline-block;
+            position: relative;
+            width: 10px;
+            top: 9.5px;
+            left: -5px;
+            margin-right: -10px;
+        }
+
+            #lang-icon {
+                height: 12px;
+                width: 12px;
+                margin-left: -8px;
+            }
+
+        #lang-form {
+            display:inline-block;
+            margin-left: -10px;
+            margin-right: -11 px;
+        }
+
+        #lang-arrow-wrap {
+            display: inline-block;
+            position: relative;
+            width: 11px;
+            top: 9.5px;
+            border-color: white;
+            right: 0px;
+            margin-left: -21px;
+        }
+
+            #lang-arrow {
+                height: 7px;
+                width: 11px;
+                margin-top: -17px;
+                
+            }
+        /*positioining magic*/
+
+        @media (max-width: 549px) {
+            #header-lang {
+                height: 28.18px;
+            }
+
+            #lang-icon-wrap, #lang-arrow-wrap {
+                height: 28.18px;
+            }
+
+            #lang-arrow, #lang-icon {
+                margin-top: -17px; 
+            }
+
+            #header-start {
+                margin-top: -4px;
+            }
+        }
+
+        @media (min-width: 550px) {
+            #header-lang {  
+                height: 36.18px;
+            }
+
+            #lang-icon-wrap, #lang-arrow-wrap {
+                height: 28.18px;
+                top: 4px; /*centering icon and arrow when selector gets larger*/
+            }
+
+            #lang-arrow, #lang-icon {
+                margin-top: -9px; 
+            }
+        }
+
+#header-space3 {
+    flex: 1 1 32px;
+}
+
+#header-signin {
+    flex: 1 0 content;
+}
+
+#header-space4 {
+    flex: 1 1 56px;
+}
+
+/*Formating the text*/
+#body-text {
+    text-align: center;
+    margin-top: 150px;
+}
+
+#body-text > h1 {
+    color: white;
+    font-size: 70px;
+}
+
+#body-text > p {
+    color: white;
+    font-size: 30px;
+    margin: 30px;
+}

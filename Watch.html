@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>NETFLIK</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="watch.css" />
+  <link rel="stylesheet" href="carousel.css"/>
+  <script src="https://kit.fontawesome.com/312b471fdf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="watch.js" type="module" async></script>
+</head>
+
+<body>
+  <div id="parent">
+    <div id="main-content"> <!--Set background image to the selected title content-->
+      <nav id="expanded-navbar">
+        <div class="left-space"></div>
+        <div><img src="Assets/NetflixLogo.svg" class="netflik-logo" /></div>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <td class="selected home">Home</td>
+              <td class="tv-shows">TV Shows</td>
+              <td class="movies">Movies</td>
+              <td class="popular">New & Popular</td>
+            </tr>
+          </table>
+        </div>
+        <div class="right-space"></div>
+      </nav>
+
+      <nav id="shrunk-navbar">
+        <div class="left-space"></div>
+        <div><img src="Assets/NetflixLogo.svg" class="netflik-logo"/></div>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <td>
+                <div>
+                  <div class="drop-down">
+                    <div class="drop-down-start">Browse <i id="carret-down" class="fa-solid fa-caret-down"></i></div>
+                      <div class="content-wrap">
+                        <div class="top-space drop-down-content">
+                          <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        </div>
+                      </div>  
+                      <div class="content-wrap"><div class="drop-down-content link selected home">Home</div></div>
+                      <div class="content-wrap"><div class="drop-down-content link tv-shows">Tv Shows</div></div>
+                      <div class="content-wrap"><div class="drop-down-content link movies">Movies</div></div>
+                      <div class="content-wrap"><div class="drop-down-content link popular">New & Popular</div></div>
+                  </div>
+                </div>  
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="right-space"></div>
+      </nav>
+      <div id="backdrop-title"></div>
+      <div id="backdrop-sum"></div>
+    </div>
+    <!--Populate the bottom divs using javascript to make netflix carousels-->
+    <div id="car-1" class="car"></div>
+    <div id="car-2" class="car"></div>
+    <div id="car-3" class="car"></div>
+    <div id="car-4" class="car"></div>
+    <div id="car-5" class="car"></div>
+    <div id="car-6" class="car"></div>
+    <div id="car-7" class="car"></div>
+    <div id="car-8" class="car"></div>
+  </div>
+</body>

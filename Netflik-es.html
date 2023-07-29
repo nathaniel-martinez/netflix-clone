@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="homePage.css">
+    <style>
+        /*This style tag is to style bootstrap elements*/
+
+        /*style the language selector*/
+        #lang-boot {
+            background-color: transparent;
+            color: white;
+            display:inline-block;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        /*signin button in header*/
+        #sign-boot {
+            font-size: 0.875rem;
+            position: relative;
+        }
+
+        #text-btn {
+            width: 160px;
+            height: 40px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 549px) {
+            /*language selector in header*/
+            #lang-boot {
+                width: 96px;
+                height: 28.18px;
+                font-size: 10px;
+            }
+
+            /*signin button in header*/
+            #sign-boot {
+                width: 84.19px;
+                height: 29.18px;
+                vertical-align: middle;
+            }
+        }
+
+        @media (min-width: 550px) {
+            /*language selector in header*/
+            #lang-boot {
+                width: 96px;
+                height: 36.18px;
+                font-size: 13px;
+                top: 12px;
+            }
+
+            /*signin button in header*/
+            #sign-boot {
+                width: 84.19px;
+                height: 36.18px;
+            }
+        }
+    </style>
+    <title>NETFLIK</title>
+</head>
+<body style="background-image: url('Assets/mainPageBackground.jpg');">
+    <!-- Top of main page logo and btns-->
+    <div id="header"> <!--flexbox-->
+        <div id="header-space1"></div> <!--Empty div to help align flexbox-->
+        <div id="header-logo"><img src="Assets/NetflixLogo.svg" id="netflik-logo"></div>
+
+        <div id="header-space2"></div> <!--Empty div to help align flexbox-->
+
+        <div id="header-lang"> <!--Div to manipulate arrangment while inside can use bootstrap-->
+            <div id ="lang-icon-wrap">
+                <img src="Assets/gobeIcon.png" id="lang-icon">
+            </div>
+            <form id="lang-form">
+                <select id="lang-boot" class="form-select selectpicker" onchange="javacsript:location.href = this.value"> <!--Code sends to diff url when changed--> <!--have to style diff width and heights based on screen size-->
+                    <option value="Netflik-en.html" style="background-color: #aaa; color: white; border-color: #aaa;"> 
+                        &nbspEnglish <!--When select this go to the site then change to val=en-->
+                    </option>
+
+                    <option selected value="Netflik-es.html" style="background-color: #aaa; color: white;">
+                        Espa&#241ol
+                    </option>
+                </select>                    
+            </form>    
+            <div id="lang-arrow-wrap">
+                <img src="Assets/dropDown.png" id="lang-arrow">
+            </div>
+        </div>   
+
+        <div id="header-space3"></div> <!--Empty div to help align flexbox-->
+
+        <div id="#header-signin">
+            <button type="button" id="sign-boot" class="btn btn-danger"> <!--have to style diff width and heights based on screen size-->
+                <div id="header-start">Start!</div>
+            </button>
+        </div>
+
+        <div id="header-space4"></div> <!--Empty div to helsp align flexbox-->
+    </div>
+    <div id="body-text">
+        <h1>Welcome to my Netflix clone!</h1>
+        <p>Are you ready?</p>
+        <div>
+            <button type="button" id="text-btn" class="btn btn-danger">
+                Bienvenidos!
+            </button>
+        </div>    
+    </div>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>NETFLIK</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="watchOutdated1.css" />
+    <script
+      src="https://kit.fontawesome.com/312b471fdf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://unpkg.com/@popperjs/core@2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="watchOutdated1.js"></script>
+    <style>
+      #dropdown-wrap {
+        display: inline-block;
+        padding-top: 3px;
+        padding-bottom: 8px;
+      }
+      .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="whole-body">
+      <!--for black background on everything-->
+      <!--Top of page large movie example-->
+      <div>
+        <!--The navigation bar for the header of the netflik page-->
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <img
+              id="netflik-logo"
+              class="navbar-brand"
+              src="Assets/NetflixLogo.svg"
+            />
+            <div id="drop-options" class="dropdown me-auto" open>
+              <button
+                id = "drop-but"
+                class="dropdown-toggle navbar-toggler me-auto"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <a id="navbar-dropdown">Browse&nbsp</a>
+                <i id="carret-down" class="fa-solid fa-caret-down"></i>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a onclick="loadHome()" class="dropdown-item">Home</a>
+                </li>
+                <li>
+                  <a onclick="loadTv()" class="dropdown-item">TV Shows</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+                <li>
+                  <a onclick="loadMovies()" class="dropdown-item">Movies</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+                <li>
+                  <a onclick="loadPopular()" class="dropdown-item">New & Popular</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+              </ul>
+            </div>
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">TV Shows</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Movies</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New & Popular</a>
+                  <!--Render this as the same page, but we use onClick to fill this content up differently-->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div>
+          <div>
+            <!--Content of background movie-->
+            <div id="first-content"></div>
+            <!--title & description-->
+            <div></div>
+            <!--Play and more info buttons-->
+          </div>
+        </div>
+      </div>
+      <div><!--Recently Added--></div>
+      <div><!--Trending--></div>
+      <div><!--Everything else etc etc below this--></div>
+      <div><!--Recently Added--></div>
+      <div><!--Recently Added--></div>
+      <div><!--Recently Added--></div>
+    </div>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+#netflik-logo {
+    height: 50px;
+    width: 100px;
+    margin-left: 60px;
+    padding-bottom: 0px;
+    padding-top: 3px;
+}
+
+/* all text inside the navbar is wrapped around an a tag*/
+.navbar a, #navbar-dropdown, #carret-down {
+    color:white;
+}
+
+/*Fixing font size of Browse drop down*/
+#navbar-dropdown, #carret-down {
+    font-size: 3vw;
+}
+
+
+.navbar-toggler {
+    padding-top: 2px;
+    padding-bottom: 6px;
+
+}
+/*Fixing font size of Browse drop down*/
+
+/*Fixing font size of Browse drop down*/
+#whole-body {
+    background-color: black;
+}
+
+/*Select each of the options in the navbar*/
+.navbar li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*Working on dropdown of navbar*/
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.dropdown-menu a{
+    color: white;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="carousel.css" />
+        <link rel="stylesheet" href="carouselTest.css"/>
+        <script src="https://kit.fontawesome.com/312b471fdf.js" crossorigin="anonymous"></script>
+        <script src="./carousel.js"></script>
+    </head>
+    <body>
+        <div style="height:100px;"></div>
+        <div id="car">
+            <div class="box-head">
+                <div class="box-title">Popular</div>
+                <div class="box-index">
+                    <!--Amount of divs here will be 
+                        (total posters + total poster mod --car-posters on screen)
+                        /--car-posters on screen -->
+                    <div class="selected"></div> <!--Class to choose which one of the divs is selected and colored diff-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="but-left" onclick="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="sel">
+                    <!--Toggle a class for the first and last poster-wrap on the windows for different popup effect-->
+                    <div class="img-wrap">
+                        <div class="poster-wrap">
+                            <img/>
+                            <div>
+                                <div><i class="fa-regular fa-circle-play play-but"></i></div>
+                                <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                                <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div>
+                        <div><i class="fa-regular fa-circle-play play-but"></i></div>
+                                <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                                <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div>
+                    </div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div><div><i class="fa-regular fa-circle-play play-but"></i></div>
+                    <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                    <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div><div><i class="fa-regular fa-circle-play play-but"></i></div>
+                    <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                    <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover-last"><img src="./smallImg.png"/><div><div><i class="fa-regular fa-circle-play play-but"></i></div>
+                    <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                    <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover-first"><img src="./smallImg.png"/><div><div><i class="fa-regular fa-circle-play play-but"></i></div>
+                    <div><span class="fa-stack plus"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-plus fa-stack-1x plus-but"></i></span></div>
+                    <div><span class="fa-stack thumb"><i class="fa-regular fa-circle fa-stack-2x circle-but"></i><i class="fa-solid fa-thumbs-up fa-stack-1x thumb-but"></i></span></div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover-last"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap-last"><img src="./smallImg.png"/></div></div>
+                </div>
+                <div class="but-right" onclick="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+        <div id="car2">
+            <div class="box-head">
+                <div class="box-title">Popular</div>
+                <div class="box-index">
+                    <!--Amount of divs here will be 
+                        (total posters + total poster mod --car-posters on screen)
+                        /--car-posters on screen -->
+                    <div class="selected"></div> <!--Class to choose which one of the divs is selected and colored diff-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="but-left" onclick="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="sel">
+                    
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div><div><table><tr><td><i class="fa-solid fa-circle-play"></i></td></tr></table></div>
+                    <div><table><tr><td><i class="fa-solid fa-circle-plus"></i></td></tr></table></div>
+                    <div><table><tr><td><i class="fa-solid fa-circle-xmark"></i></td></tr></table><div style="width:100px;height: 100px; background-color:black;"></div></div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                </div>
+                <div class="but-right" onclick="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+
+        <div id="car3">
+            <div class="box-head">
+                <div class="box-title">Popular</div>
+                <div class="box-index">
+                    <!--Amount of divs here will be 
+                        (total posters + total poster mod --car-posters on screen)
+                        /--car-posters on screen -->
+                    <div class="selected"></div> <!--Class to choose which one of the divs is selected and colored diff-->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="but-left" onclick="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="sel">
+                    <div class="img-wrap"><div class="poster-wrap poster-hover"><img src="./smallImg.png"/><div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/><div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/><div></div></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                    <div class="img-wrap"><div class="poster-wrap"><img src="./smallImg.png"/></div></div>
+                </div>
+                <div class="but-right" onclick="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </body>
+</html>

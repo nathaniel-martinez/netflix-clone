@@ -1,0 +1,372 @@
+@media screen and (min-width:1100px){
+    :root {
+        --car-posters: 5;
+        --sm-ar-hor: 30%;
+        --sm-ar-top: 40%;
+        --lg-ar-hor: 21%;
+        --lg-ar-top: 34%;
+        --sm-ar-size: 2em;
+        --lg-ar-size: 3em;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width: 1099px){
+    :root {
+        --car-posters: 4;
+        --sm-ar-hor: 20%;
+        --sm-ar-top: 40%;
+        --lg-ar-hor: 16%;
+        --lg-ar-top: 34%;
+        --sm-ar-size: 2em;
+        --lg-ar-size: 3em;
+    }
+}
+
+@media screen and (max-width:799px){
+    :root {
+        --car-posters: 3;
+        --sm-ar-hor: 19%;
+        --sm-ar-top: 42%;
+        --lg-ar-hor: 11%;
+        --lg-ar-top: 40%;
+        --sm-ar-size: 1.5em;
+        --lg-ar-size: 2em;
+    }
+}
+
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.box {
+    height: 132.406px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+}
+
+/*call the flex elements inside box*/
+.box > div {
+    flex: 0 0 auto;
+}
+
+.but-left, .but-right {
+    position: relative;
+    width: 5%;
+    z-index: 7;
+}
+
+.but-left:hover, .but-right:hover {
+    position: relative;
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.but-left > i, .but-right > i {
+    display: none;
+    position: absolute;
+    /*color: white;*/
+}
+
+/*The order here is important*/
+.but-left:hover > i, .but-right:hover > i {
+    display: inline;
+    top: var(--lg-ar-top) !important;
+    font-size: var(--lg-ar-size) !important;
+}
+
+.but-left:hover > i {
+    left: var(--lg-ar-hor) !important;
+}
+
+.but-right:hover > i {
+    right: var(--lg-ar-hor) !important;
+}
+
+.box:hover > .but-left > i, .box:hover > .but-right > i {
+    display: inline;
+    top: var(--sm-ar-top);
+    font-size: var(--sm-ar-size);
+}
+
+.box:hover > .but-left > i {
+    left: var(--sm-ar-hor);
+}
+
+.box:hover > .but-right > i {
+    right: var(--sm-ar-hor);
+}
+
+.sel {
+    display: flex;
+    width: 90%;
+    /*transform: translatex(0%);*/
+}
+
+.sel:hover {
+    z-index: 5;
+}
+
+.img-wrap {
+    flex: 0 0 auto;
+    display: flex;
+    height: 100%;
+    width: calc(100% / var(--car-posters));
+}
+
+.poster-wrap {
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+}
+
+.poster-wrap > img {
+    height: 100%;
+    width: 98%;
+    margin: 0% 1%;
+}
+
+.poster-wrap > div {
+    width: 98%;
+    margin: 0% 1%;
+    height: 0%;
+}
+
+.poster-wrap .circle-but, .poster-wrap .plus-but, .poster-wrap .thumb-but, .poster-wrap .play-but {
+    font-size: 0em;
+}
+
+.poster-hover-first:hover {
+    position: relative;
+    transition: bottom 100ms ease-in 0.5s, left 100ms ease-in 0.5s, height 100ms ease-in 0.5s, width 100ms ease-in 0.5s, margin-top 100ms ease-in 0.5s, margin-left 100ms ease-in 0.5s;
+    bottom: 8%;
+    left: 24.6%;
+    height: 200%;
+    width: 140%;
+    margin-top: -25%;
+    margin-left: -25%;
+}
+
+.poster-hover:hover {
+    position: relative;
+    transition: bottom 100ms ease-in 0.5s, left 100ms ease-in 0.5s, height 100ms ease-in 0.5s, width 100ms ease-in 0.5s, margin-top 100ms ease-in 0.5s, margin-left 100ms ease-in 0.5s;
+    bottom: 8%;
+    left: 12%;
+    height: 200%;
+    width: 140%;
+    margin-top: -25%;
+    margin-left: -25%;
+}
+
+.poster-hover-last:hover {
+    position: relative;
+    transition: bottom 100ms ease-in 0.5s, left 100ms ease-in 0.5s, height 100ms ease-in 0.5s, width 100ms ease-in 0.5s, margin-top 100ms ease-in 0.5s, margin-left 100ms ease-in 0.5s;
+    bottom: 8%;
+    height: 200%;
+    width: 140%;
+    margin-top: -25%;
+    margin-left: -25%;
+}
+
+.poster-hover-first:hover > img {
+    transition: height 100ms ease-in 0.5s;
+    height: 70%;
+}
+
+.poster-hover:hover > img {
+    transition: height 100ms ease-in 0.5s;
+    height: 70%;
+}
+
+.poster-hover-last:hover > img {
+    transition: height 100ms ease-in 0.5s;
+    height: 70%;
+}
+
+.poster-hover-first:hover > div {
+    display: flex;
+    transition: height 100ms ease-in 0.5s;
+    overflow: hidden;
+    height: 30%;
+    justify-content: start;
+    position: relative;
+    bottom: 4%;
+    background-color: aqua;
+}
+
+.poster-hover:hover > div {
+    display: flex;
+    transition: height 100ms ease-in 0.5s;
+    overflow: hidden;
+    height: 30%;
+    justify-content: start;
+    position: relative;
+    bottom: 4%;
+    background-color: aqua;
+}
+
+.poster-hover-last:hover > div {
+    display: flex;
+    transition: height 100ms ease-in 0.5s;
+    overflow: hidden;
+    height: 30%;
+    justify-content: start;
+    position: relative;
+    bottom: 4%;
+    background-color: aqua;
+}
+
+.poster-hover-first:hover > div > div {
+    width: 17%;
+    height: 100%;
+    padding-top: 5%;
+}
+
+.poster-hover:hover > div > div {
+    width: 17%;
+    height: 100%;
+    padding-top: 6%;
+}
+
+.poster-hover-last:hover > div > div {
+    width: 17%;
+    height: 100%;
+    padding-top: 6%;
+}
+
+.poster-hover-first:hover .play-but {
+    font-size: 3em;
+    margin-left: 39%;
+}
+
+.poster-hover-first:hover .plus {
+    margin-left: 112%;
+}
+
+.poster-hover-first:hover .thumb {
+    margin-left: 184%;
+}
+
+.poster-hover-first:hover .circle-but {
+    font-size: 3em;
+}
+
+.poster-hover-first:hover .plus-but {
+    font-size: 2em;
+    margin-top: 20%;
+    margin-left: 11%;
+}
+
+.poster-hover-first:hover .thumb-but {
+    font-size: 1.6em;
+    margin-top: 19%;
+    margin-left: 9%;
+}
+
+.poster-hover:hover .play-but {
+    font-size: 3em;
+    margin-left: 39%;
+}
+
+.poster-hover:hover .plus {
+    margin-left: 112%;
+}
+
+.poster-hover:hover .thumb {
+    margin-left: 184%;
+}
+
+.poster-hover:hover .circle-but {
+    font-size: 3em;
+}
+
+.poster-hover:hover .plus-but {
+    font-size: 2em;
+    margin-top: 20%;
+    margin-left: 11%;
+}
+
+.poster-hover:hover .thumb-but {
+    font-size: 1.6em;
+    margin-top: 19%;
+    margin-left: 9%;
+}
+
+.poster-hover-last:hover .play-but {
+    font-size: 3em;
+    margin-left: 39%;
+}
+
+.poster-hover-last:hover .plus {
+    margin-left: 112%;
+}
+
+.poster-hover-last:hover .thumb {
+    margin-left: 184%;
+}
+
+.poster-hover-last:hover .circle-but {
+    font-size: 3em;
+}
+
+.poster-hover-last:hover .plus-but {
+    font-size: 2em;
+    margin-top: 20%;
+    margin-left: 11%;
+}
+
+.poster-hover-last:hover .thumb-but {
+    font-size: 1.6em;
+    margin-top: 19%;
+    margin-left: 9%;
+}
+
+.box-head {
+    position: relative;
+    width: 90%;
+    margin: 8px 5%;
+    height: 20px;
+}
+
+.box-title {
+    position: absolute;
+    font-size: 17px;
+}
+
+.box-index {
+    display: none;
+    position: absolute;
+    right: 0px;
+    bottom: 6px;
+    height: 2px;
+}
+
+.car:has(.sel:hover) .box-index {
+    display: flex;
+}
+
+.box-index > div {
+    width: 10px;
+    background-color: grey;
+    margin: 0px 1px; 
+}
+
+.box-index > .selected {
+    background-color: white;
+}
+
+/*
+#car:has(.sel:hover) .box-index {
+    display:flex;
+}
+
+#car2 {
+    margin-top: 20px;
+}
+
+#car3 {
+    margin-top: 20px;
+}*/
