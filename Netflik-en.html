@@ -16,7 +16,8 @@
             display:inline-block;
             margin-left: -10px;
             margin-right: -10px;
-            padding-right: 14px;
+            padding-left: 18px;
+            padding-bottom: 4px;
         }
 
         /*signin button in header*/
@@ -78,19 +79,19 @@
                 <img src="Assets/gobeIcon.png" id="lang-icon">
             </div>
             <form id="lang-form"> <!--Pass the language as a variable causing the watch site to be rendered in english or spanish-->
-                <select id="lang-boot" class="form-select selectpicker" onchange="javacsript:location.href = this.value"> <!--Code sends to diff url when changed--> <!--have to style diff width and heights based on screen size-->
+                <select id="lang-boot" onchange="javacsript:location.href = this.value"> <!--Code sends to diff url when changed--> <!--have to style diff width and heights based on screen size-->
                     <option selected value="Netflik-en.html" style="background-color: #aaa; color: white; border-color: #aaa;"> 
                         &nbspEnglish <!--When select this go to the site then change to val=en-->
                     </option>
 
                     <option value="Netflik-es.html" style="background-color: #aaa; color: white;">
-                        Espa&#241ol
+                        &nbspEspa&#241ol
                     </option>
                 </select>                    
             </form>    
-            <div id="lang-arrow-wrap">
+            <!--<div id="lang-arrow-wrap">
                 <img src="Assets/dropDown.png" id="lang-arrow">
-            </div>
+            </div>-->
         </div>   
 
         <div id="header-space3"></div> <!--Empty div to help align flexbox-->
