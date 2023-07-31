@@ -63,7 +63,6 @@
         #lang-form {
             display:inline-block;
             margin-left: -10px;
-            margin-right: -11 px;
         }
 
         #lang-arrow-wrap {
@@ -94,7 +93,7 @@
             }
 
             #lang-arrow, #lang-icon {
-                margin-top: -17px; 
+                margin-top: -11px; 
             }
 
             #header-start {
@@ -113,7 +112,7 @@
             }
 
             #lang-arrow, #lang-icon {
-                margin-top: -9px; 
+                margin-top: -8px; 
             }
         }
 
